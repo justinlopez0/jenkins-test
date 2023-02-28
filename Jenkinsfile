@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Composer Install') {
             steps {
-                sh 'composer install'
+                sh 'composer install --ignore-platform-reqs'
             }
         }
         stage('Unit Tests') {
