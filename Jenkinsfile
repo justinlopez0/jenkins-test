@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('Composer Install') {
             steps {
+                cp jenkins.env .env
                 sh 'composer install --ignore-platform-reqs'
             }
         }
